@@ -10,6 +10,8 @@
   z-index: 10;
 
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1vw;
   padding: 3vw;
 }
@@ -18,8 +20,13 @@
     margin: 0;
   }
 
+  .nav > a:first-child,
   .nav > a:last-child {
-    margin-left: auto;
+    width: 33%;
+  }
+
+  .nav > a:last-child {
+    text-align: right;
   }
 
 .main {
@@ -41,4 +48,8 @@
   top: 0;
   left: 0;
   object-fit: cover;
+}
+
+.footer {
+  padding: 3vw;
 }
