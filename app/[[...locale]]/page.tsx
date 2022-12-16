@@ -2,14 +2,22 @@
 
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { SVG } from '../../components/svg'
 import styles from './page.module.css'
 
-const videos = [
-  'https://dispatchuploads.b-cdn.net/CS_QSPP_GND_90SEC_16082022_16_9.mp4',
-  'https://dispatchuploads.b-cdn.net/CS_QSPP_GND_90SEC_16082022_16_9.mp4',
-  'https://dispatchuploads.b-cdn.net/CS_QSPP_GND_90SEC_16082022_16_9.mp4'
-]
+const videos = {
+  desktop: [
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_A.mp4',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_B.mp4',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C.mp4'
+  ],
+  mobile: [
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_A.webm',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_B.webm',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C.webm'
+  ]
+}
 
 const content = {
   titre: {
@@ -34,17 +42,19 @@ To underline this evolution and in order to allow the inclusive conceptual appro
   }
 }
 
-let count = 0
+let count: number
 
 export default function Home({ params: { locale } }: { params: { locale: string[] } }) {
   const lang = (locale && locale[0] as 'en' | 'fr') || 'fr'
-  count = (count + 1) % 3
   
   let video: HTMLVideoElement = null
   const [muted, setMuted] = useState<Boolean>()
 
   function setVideo(element: HTMLVideoElement) {
     video = element
+    if (!count) {
+      count = Math.floor(Math.random() * 3)
+    }
     setMuted(video?.muted)
   }
 
@@ -58,24 +68,24 @@ export default function Home({ params: { locale } }: { params: { locale: string[
       <nav className={styles.nav}>
         <div>
           <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>
-            {content.nav.locale[lang]}
+            {lang === 'en' ? <SVG k='fr' label='Français' /> : <SVG k='en' label='English' />}
           </a>
           &nbsp;&nbsp;
-          {/* <button className={styles.button} onClick={muteToggle}>{muted ? 'Unmute' : 'Mute'}</button> */}
+          <button className={styles.button} onClick={muteToggle}>{muted ? <SVG k='off' label='Unmute' /> : <SVG k='on' label='Mute' />}</button>
         </div>
         {/* <a href='/'></a> */}
-        <a href=''>{content.nav.old[lang]}</a>
+        <a href='http://alaincarle.ca' target='_blank'>{content.nav.old[lang]}</a>
       </nav>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          AtelierCarle
+          <SVG k='logo' label='AtelierCarle' />
         </h1>
 
         <p className={styles.content}>{content.content[lang]}</p>
       </main>
 
-      {/* <video ref={setVideo} className={styles.video} src={videos[count]} autoPlay playsInline muted loop></video> */}
+      <video ref={setVideo} className={styles.video} src={videos.desktop[count]} autoPlay playsInline muted loop></video>
 
       <footer className={styles.footer}>
         <nav>
