@@ -34,7 +34,12 @@ const content = {
     },
   },
   content: {
-      fr: `With a view to continuity and consolidation of achievements, Alain Carle is joining forces with five key collaborators to launch a new inclusive agency looking to the future. 
+      fr: `Dans une perspective de continuité et de consolidation des acquis, Alain Carle s’associe à cinq collaborateurs clés afin de lancer un nouveau projet inclusif et porteur d’avenir. 
+
+Un partenariat de longue date est aujourd’hui officialisé entre le fondateur, Abel Bravo Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne et Gabriel Ostiguy, assurant ainsi la pérennité d’une pratique réflexive développée au fil des années.
+
+Pour souligner cette évolution et afin de refléter l’approche conceptuelle inclusive qui unit tous les partenaires et chaque membre de l’équipe, Alain Carle Architecte se dote aujourd’hui d’une nouvelle identité et devient Atelier Carle.`,
+      en: `With a view to continuity and consolidation of achievements, Alain Carle is joining forces with five key collaborators to launch a new inclusive agency looking to the future. 
 
 A long-standing partnership is now formalized between the founder, Abel Bravo-Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne and Gabriel Ostiguy, thus ensuring the sustainability of a reflective practice developed over the years. 
 

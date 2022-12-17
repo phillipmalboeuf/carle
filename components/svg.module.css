@@ -7,11 +7,18 @@
 }
 
   .icon--logo {
-    width: 50vw;
+    width: 45vw;
     height: 20vw;
     /* width: $rythm*2.4;
     height: $rythm*1.4; */
     /* color: $brand; */
+  }
+
+  @media (orientation: portrait) {
+    .icon--logo {
+      width: 88vw;
+      height: 20vw;
+    }
   }
 
   .icon--off,

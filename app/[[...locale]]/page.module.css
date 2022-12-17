@@ -1,5 +1,12 @@
 .container {
   --padding: 3vw;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1333;
+  
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 @media (orientation: portrait) {
@@ -55,12 +62,7 @@
   position: relative;
   z-index: 5;
   min-height: 100vh;
-  padding: var(--padding) calc(var(--padding) * 2);
-  flex: 1;
-  display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  align-items: flex-end;
+  padding: var(--padding) calc(var(--padding) * 6.66);
 }
 
   .title {
@@ -75,8 +77,34 @@
 
   .content {
     margin-top: 90vh;
-    font-size: var(--padding);
+    font-size: calc(var(--padding) * 0.66);
     white-space: pre-line;
+  }
+
+  @media (orientation: portrait) {
+    .nav {
+      position: static;
+      order: 99;
+    }
+
+      .nav > a:last-child {
+        order: -1;
+      }
+
+    .main {
+      padding: var(--padding);
+    }
+    
+    .title {
+      position: static;
+      transform: none;
+    }
+
+    .content {
+      margin-top: 66vh;
+      font-size: calc(var(--padding) * 0.88);
+      line-height: 1.36;
+    }
   }
 
 .video {
