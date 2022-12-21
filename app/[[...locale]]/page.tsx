@@ -38,7 +38,7 @@ const content = {
 
 Un partenariat de longue date est aujourd’hui officialisé entre le fondateur, Abel Bravo Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne et Gabriel Ostiguy, assurant ainsi la pérennité d’une pratique réflexive développée au fil des années.
 
-Pour souligner cette évolution et afin de refléter l’approche conceptuelle inclusive qui unit tous les partenaires et chaque membre de l’équipe, Alain Carle Architecte se dote aujourd’hui d’une nouvelle identité et devient Atelier Carle.`,
+Pour souligner cette évolution et afin de refléter l’approche conceptuelle inclusive qui unit tous les partenaires et chaque membre de l’équipe, Alain Carle Architecte se dote aujourd’hui d’une nouvelle identité et devient AtelierCarle.`,
       en: `With a view to continuity and consolidation of achievements, Alain Carle is joining forces with five key collaborators to launch a new inclusive agency looking to the future. 
 
 A long-standing partnership is now formalized between the founder, Abel Bravo-Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne and Gabriel Ostiguy, thus ensuring the sustainability of a reflective practice developed over the years. 
@@ -94,16 +94,19 @@ export default function Home({ params: { locale } }: { params: { locale: string[
 
       <footer className={styles.footer}>
         <nav>
-          <a href=''>400 - 3643 Boul. Saint-Laurent<br />Montreal, Quebec H2X 2V5</a>
+          <a href='https://goo.gl/maps/daqjFkbLnKjf2PcH7' target='_blank' rel='noopener'>400 - 3643 Boul. Saint-Laurent<br />Montreal, Quebec H2X 2V5</a>
           <div>
-            <a href=''>+1 514 989 1739</a><br />
-            <a href=''>info@ateliercarle.ca</a>
+            <a href='tel:+1 514 989 1739' target='_blank' rel='noopener'>+1 514 989 1739</a><br />
+            <a href='mailto:info@ateliercarle.ca' target='_blank' rel='noopener'>info@ateliercarle.ca</a>
           </div>
           <div>
-            <a href=''>Instagram</a><br />
-            <a href=''>Facebook</a>
+            <a href='https://www.instagram.com/alaincarlearchitecte' target='_blank' rel='noopener'>Instagram</a><br />
+            <a href='https://www.facebook.com/alaincarlearchitecte' target='_blank' rel='noopener'>Facebook</a>
           </div>
-          <a href=''>LinkedIn</a>
+          <div>
+            <a href='https://www.linkedin.com/company/alain-carle-architecte/' target='_blank' rel='noopener'>LinkedIn</a><br />
+            <a href='https://www.pinterest.ca/acarle1313/' target='_blank' rel='noopener'>Pinterest</a>
+          </div>
         </nav>
       </footer>
     </div>
