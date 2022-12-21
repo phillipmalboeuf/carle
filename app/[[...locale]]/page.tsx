@@ -79,7 +79,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
           <button className={styles.button} onClick={muteToggle}>{muted ? <SVG k='off' label='Unmute' /> : <SVG k='on' label='Mute' />}</button>
         </div>
         {/* <a href='/'></a> */}
-        <a href='http://alaincarle.ca' target='_blank'>{content.nav.old[lang]}</a>
+        <a href='http://alaincarle.ca' target='_blank' rel='noopener'>{content.nav.old[lang]}</a>
       </nav>
 
       <main className={styles.main}>
