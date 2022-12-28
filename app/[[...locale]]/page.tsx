@@ -89,8 +89,11 @@ export default function Home({ params: { locale } }: { params: { locale: string[
 
         <p className={styles.content}>{content.content[lang]}</p>
       </main>
-
-      <video ref={setVideo} className={styles.video} src={videos.desktop[count]} autoPlay playsInline muted loop></video>
+      
+      <video ref={setVideo} className={styles.video} autoPlay playsInline muted loop>
+        <source media='(orientation: portrait)' src={videos.mobile[count]} type="video/webm" />
+        <source media='(orientation: landscape)' src={videos.desktop[count]} type="video/mp4" />
+      </video>
 
       <footer className={styles.footer}>
         <nav>
@@ -103,10 +106,10 @@ export default function Home({ params: { locale } }: { params: { locale: string[
             <a href='https://www.instagram.com/alaincarlearchitecte' target='_blank' rel='noopener'>Instagram</a><br />
             <a href='https://www.facebook.com/alaincarlearchitecte' target='_blank' rel='noopener'>Facebook</a>
           </div>
-          <div>
+          {/* <div>
             <a href='https://www.linkedin.com/company/alain-carle-architecte/' target='_blank' rel='noopener'>LinkedIn</a><br />
             <a href='https://www.pinterest.ca/acarle1313/' target='_blank' rel='noopener'>Pinterest</a>
-          </div>
+          </div> */}
         </nav>
       </footer>
     </div>

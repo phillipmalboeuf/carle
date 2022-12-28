@@ -23,12 +23,12 @@
 
   .icon--off,
   .icon--on {
-    width: calc(52px / 1.25);
-    height: calc(35px / 1.25);
+    width: calc(52px);
+    height: calc(35px);
   }
 
   .icon--fr,
   .icon--en {
-    width: calc(52px / 1.25);
-    height: calc(36px / 1.25);
+    width: calc(52px);
+    height: calc(36px);
   }

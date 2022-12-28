@@ -1,4 +1,5 @@
 .container {
+  --height: 100vh;
   --padding: 3vw;
   display: flex;
   flex-direction: column;
@@ -9,6 +10,12 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   color: white;
+}
+
+@supports (height: 100dvh) {
+  .container {
+    --height: 100dvh;
+  }
 }
 
 @media (orientation: portrait) {
@@ -40,10 +47,10 @@
   z-index: 10;
 
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   gap: 1vw;
-  padding: var(--padding);
+  padding: calc(var(--padding) * 0.666);
 }
 
   .nav > a:last-child {
@@ -63,8 +70,20 @@
 .main {
   position: relative;
   z-index: 5;
-  min-height: 100vh;
+  min-height: var(--height);
   padding: var(--padding) calc(var(--padding) * 6.66);
+}
+
+.main:before {
+  content: "";
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: block;
+  background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+  height: calc(var(--height) * 0.1);
+  width: 100vw;
+  opacity: 0.33;
 }
 
   .title {
@@ -79,7 +98,7 @@
 
   .content {
     margin-top: 90vh;
-    font-size: calc(var(--padding) * 0.66);
+    font-size: calc(var(--padding) * 0.75);
     white-space: pre-line;
   }
 
@@ -87,10 +106,16 @@
     .nav {
       position: static;
       order: 99;
+      align-items: center;
+      padding: var(--padding);
     }
 
       .nav > a:last-child {
         order: -1;
+      }
+
+      .nav button {
+        display: none;
       }
 
     .main {
@@ -98,7 +123,9 @@
     }
     
     .title {
-      position: static;
+      position: fixed;
+      top: var(--padding);
+      left: var(--padding);
       transform: none;
     }
 
@@ -110,7 +137,7 @@
   }
 
 .video {
-  height: 100vh;
+  height: var(--height);
   width: 100vw;
   position: fixed;
   z-index: -1;
@@ -120,6 +147,10 @@
 }
 
 .footer {
+  /* position: sticky;
+  bottom: 0; */
+  position: relative;
+  z-index: 2;
   margin-top: 66vh;
   padding: var(--padding);
   font-size: 1rem;
@@ -127,7 +158,7 @@
 
   .footer nav {
     display: flex;
-    gap: var(--padding);
+    gap: calc(var(--padding) * 2);
     justify-content: center;
   }
 
