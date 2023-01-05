@@ -14,7 +14,7 @@
 @media (orientation: portrait) {
   .container {
     --padding: 3vh;
-    height: auto !important;
+    /* height: auto !important; */
   }
 
   /* @supports (height: 100dvh) {
@@ -99,10 +99,13 @@
 
   @media (orientation: portrait) {
     .nav {
-      position: static;
+      position: -webkit-sticky;
+      position: sticky;
+      top: calc(var(--height) - calc(var(--padding) * 3));
       order: 99;
       align-items: center;
       padding: var(--padding);
+      padding-bottom: 0;
     }
 
       .nav > a:last-child {
@@ -158,8 +161,9 @@
 
   @media (orientation: portrait) {
     .footer {
-      position: relative;
-      top: 0;
+      /* position: relative;
+      top: 0; */
+      top: calc(var(--height) - calc(var(--padding) * 8.8));
       font-size: 1rem;
       padding-bottom: 0;
     }
