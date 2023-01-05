@@ -10,6 +10,7 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
   color: white;
+  background-color: black;
 }
 
 @supports (height: 100dvh) {
