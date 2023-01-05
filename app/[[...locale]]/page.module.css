@@ -14,6 +14,7 @@
 @media (orientation: portrait) {
   .container {
     --padding: 3vh;
+    height: auto !important;
   }
 
   @supports (height: 100dvh) {
@@ -27,10 +28,10 @@
     background: grey;
   }
 
-  .container a:hover,
+  /* .container a:hover,
   .container a:focus {
     text-decoration: underline;
-  }
+  } */
 
 .nav {
   position: fixed;
@@ -61,22 +62,21 @@
   }
 
 .main {
-  min-height: var(--height);
   padding: var(--padding) calc(var(--padding) * 6.66);
 }
 
-.main:before {
-  content: "";
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  bottom: 0;
-  display: block;
-  background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
-  height: calc(var(--height) * 0.1);
-  width: 100vw;
-  opacity: 0.5;
-}
+  .main:before {
+    content: "";
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    display: block;
+    background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+    height: calc(var(--height) * 0.1);
+    width: 100vw;
+    opacity: 0.5;
+  }
 
   .title {
     position: fixed;
@@ -141,13 +141,13 @@
 }
 
 .footer {
+  position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  /* position: relative; */
+  top: calc(var(--height) - calc(var(--padding) * 3));
   z-index: 2;
-  margin-top: 66vh;
+  margin-top: 10vh;
   padding: var(--padding);
-  font-size: 1.3vw;
+  font-size: 1.42vw;
 }
 
   .footer nav {
@@ -158,6 +158,8 @@
 
   @media (orientation: portrait) {
     .footer {
+      position: relative;
+      top: 0;
       font-size: 1rem;
     }
 

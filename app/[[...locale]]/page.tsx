@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { SVG } from '../../components/svg'
 import styles from './page.module.css'
 
@@ -51,6 +51,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
   const lang = (locale && locale[0] as 'en' | 'fr') || 'fr'
   
   let video: HTMLVideoElement = null
+  const div = useRef<HTMLDivElement>()
   const [muted, setMuted] = useState<Boolean>()
   const [v, setV] = useState<string>()
 
@@ -69,7 +70,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
   }
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={div.current ? { height: `calc((var(--height) * 2) + ${div.current.offsetHeight}px)` } : {}}>
       <nav className={styles.nav}>
         <div>
           <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>
@@ -87,7 +88,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
           <SVG k='logo' label='AtelierCarle' />
         </h1>
 
-        <p className={styles.content}>{content.content[lang]}</p>
+        <p className={styles.content} ref={div}>{content.content[lang]}</p>
       </main>
       
       <video ref={setVideo} className={styles.video} src={v} autoPlay playsInline muted loop></video>
