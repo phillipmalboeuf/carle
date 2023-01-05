@@ -5,11 +5,11 @@
   flex-direction: column;
 }
 
-@supports (height: 100dvh) {
+/* @supports (height: 100dvh) {
   .container {
     --height: 100dvh;
   }
-}
+} */
 
 @media (orientation: portrait) {
   .container {
@@ -17,11 +17,11 @@
     height: auto !important;
   }
 
-  @supports (height: 100dvh) {
+  /* @supports (height: 100dvh) {
     .container {
       --padding: 3dvh;
     }
-  }
+  } */
 }
 
   .container ::selection {
