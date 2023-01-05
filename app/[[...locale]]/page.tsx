@@ -13,9 +13,9 @@ const videos = {
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C.mp4'
   ],
   mobile: [
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_A.webm',
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_B.webm',
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C.webm'
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_A.mp4',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_B.mp4',
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C.mp4'
   ]
 }
 
