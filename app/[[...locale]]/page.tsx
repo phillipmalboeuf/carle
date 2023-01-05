@@ -47,18 +47,18 @@ To underline this evolution and in order to allow the inclusive conceptual appro
   }
 }
 
-let count: number
-
 export default function Home({ params: { locale } }: { params: { locale: string[] } }) {
   const lang = (locale && locale[0] as 'en' | 'fr') || 'fr'
   
   let video: HTMLVideoElement = null
   const [muted, setMuted] = useState<Boolean>()
+  const [v, setV] = useState<string>()
 
   function setVideo(element: HTMLVideoElement) {
     video = element
-    if (!count) {
-      count = Math.floor(Math.random() * 3)
+    const r = Math.floor(Math.random() * 3)
+    if (!v) {
+      setV(window.matchMedia("(orientation: portrait)").matches ? videos.mobile[r] : videos.desktop[r])
     }
     setMuted(video?.muted)
   }
@@ -90,10 +90,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
         <p className={styles.content}>{content.content[lang]}</p>
       </main>
       
-      <video ref={setVideo} className={styles.video} autoPlay playsInline muted loop>
-        <source media='(orientation: portrait)' src={videos.mobile[count]} type="video/webm" />
-        <source media='(orientation: landscape)' src={videos.desktop[count]} type="video/mp4" />
-      </video>
+      <video ref={setVideo} className={styles.video} src={v} autoPlay playsInline muted loop></video>
 
       <footer className={styles.footer}>
         <nav>

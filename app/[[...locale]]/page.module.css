@@ -3,14 +3,6 @@
   --padding: 3vw;
   display: flex;
   flex-direction: column;
-  line-height: 1.1333;
-  
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-  color: white;
-  background-color: black;
 }
 
 @supports (height: 100dvh) {
@@ -69,8 +61,6 @@
   }
 
 .main {
-  position: relative;
-  z-index: 5;
   min-height: var(--height);
   padding: var(--padding) calc(var(--padding) * 6.66);
 }
@@ -78,17 +68,19 @@
 .main:before {
   content: "";
   position: fixed;
+  z-index: 1;
   left: 0;
   bottom: 0;
   display: block;
   background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
   height: calc(var(--height) * 0.1);
   width: 100vw;
-  opacity: 0.33;
+  opacity: 0.5;
 }
 
   .title {
     position: fixed;
+    z-index: 2;
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
@@ -98,6 +90,8 @@
   }
 
   .content {
+    position: relative;
+    z-index: 2;
     margin-top: 90vh;
     font-size: calc(var(--padding) * 0.75);
     white-space: pre-line;
@@ -141,20 +135,19 @@
   height: var(--height);
   width: 100vw;
   position: fixed;
-  z-index: -1;
   top: 0;
   left: 0;
   object-fit: cover;
 }
 
 .footer {
-  /* position: sticky;
-  bottom: 0; */
-  position: relative;
+  position: sticky;
+  top: 0;
+  /* position: relative; */
   z-index: 2;
   margin-top: 66vh;
   padding: var(--padding);
-  font-size: 1rem;
+  font-size: 1.3vw;
 }
 
   .footer nav {
@@ -164,6 +157,10 @@
   }
 
   @media (orientation: portrait) {
+    .footer {
+      font-size: 1rem;
+    }
+
     .footer nav {
       flex-direction: column;
     }
