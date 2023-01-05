@@ -140,12 +140,6 @@
   object-fit: cover;
 }
 
-@supports (height: 100dvh) {
-  .footer {
-    --height: 100dvh;
-  }
-}
-
 .footer {
   position: -webkit-sticky;
   position: sticky;
