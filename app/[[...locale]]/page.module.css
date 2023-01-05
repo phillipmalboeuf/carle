@@ -14,7 +14,7 @@
 @media (orientation: portrait) {
   .container {
     --padding: 3vh;
-    height: auto !important;
+    /* height: auto !important; */
   }
 
   /* @supports (height: 100dvh) {
@@ -102,7 +102,7 @@
       position: static;
       order: 99;
       align-items: center;
-      padding: var(--padding);
+      padding: var(--padding) 0;
     }
 
       .nav > a:last-child {
@@ -150,7 +150,7 @@
   font-size: 1.25vw;
 }
 
-  .footer nav {
+  .footer nav:first-child {
     display: flex;
     gap: calc(var(--padding) * 2);
     justify-content: center;
@@ -158,18 +158,19 @@
 
   @media (orientation: portrait) {
     .footer {
-      position: relative;
-      top: 0;
-      font-size: 1rem;
+      /* position: relative;
+      top: 0; */
+      top: calc(var(--height) - calc(var(--padding) * 9.5));
+      font-size: calc(var(--padding) * 0.88);
       padding-bottom: 0;
     }
 
-    .footer nav {
+    .footer nav:first-child {
       flex-direction: column;
       gap: calc(var(--padding) * 1);
     }
 
-    .footer nav div:last-child {
+    .footer nav:first-child div:last-child {
       margin-top: calc(var(--padding) * -1);
     }
   }

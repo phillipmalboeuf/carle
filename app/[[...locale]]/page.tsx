@@ -71,18 +71,6 @@ export default function Home({ params: { locale } }: { params: { locale: string[
 
   return (
     <div className={styles.container} style={div.current ? { height: `calc((var(--height) * 2) + ${div.current.offsetHeight}px)` } : {}}>
-      <nav className={styles.nav}>
-        <div>
-          <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>
-            {lang === 'en' ? <SVG k='fr' label='Français' /> : <SVG k='en' label='English' />}
-          </a>
-          &nbsp;&nbsp;
-          <button className={styles.button} onClick={muteToggle}>{muted ? <SVG k='off' label='Unmute' /> : <SVG k='on' label='Mute' />}</button>
-        </div>
-        {/* <a href='/'></a> */}
-        <a href='http://alaincarle.ca' target='_blank' rel='noopener'>{content.nav.old[lang]}</a>
-      </nav>
-
       <main className={styles.main}>
         <h1 className={styles.title}>
           <SVG k='logo' label='AtelierCarle' />
@@ -108,6 +96,18 @@ export default function Home({ params: { locale } }: { params: { locale: string[
             <a href='https://www.linkedin.com/company/alain-carle-architecte/' target='_blank' rel='noopener'>LinkedIn</a><br />
             <a href='https://www.pinterest.ca/acarle1313/' target='_blank' rel='noopener'>Pinterest</a>
           </div> */}
+        </nav>
+
+        <nav className={styles.nav}>
+          <div>
+            <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>
+              {lang === 'en' ? <SVG k='fr' label='Français' /> : <SVG k='en' label='English' />}
+            </a>
+            &nbsp;&nbsp;
+            <button className={styles.button} onClick={muteToggle}>{muted ? <SVG k='off' label='Unmute' /> : <SVG k='on' label='Mute' />}</button>
+          </div>
+          {/* <a href='/'></a> */}
+          <a href='http://alaincarle.ca' target='_blank' rel='noopener'>{content.nav.old[lang]}</a>
         </nav>
       </footer>
     </div>
