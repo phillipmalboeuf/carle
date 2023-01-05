@@ -161,9 +161,15 @@
       position: relative;
       top: 0;
       font-size: 1rem;
+      padding-bottom: 0;
     }
 
     .footer nav {
       flex-direction: column;
+      gap: calc(var(--padding) * 1);
+    }
+
+    .footer nav div:last-child {
+      margin-top: calc(var(--padding) * -1);
     }
   }
