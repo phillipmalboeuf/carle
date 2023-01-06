@@ -91,7 +91,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
         <p className={styles.content} ref={div}>{content.content[lang]}</p>
       </main>
       
-      <video ref={setVideo} className={styles.video} src={v} autoPlay playsInline muted loop></video>
+      <video ref={setVideo} className={styles.video} src={v} autoPlay playsInline muted loop controls={false}></video>
 
       <footer className={styles.footer}>
         <nav>
