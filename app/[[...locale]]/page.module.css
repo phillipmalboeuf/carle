@@ -5,11 +5,11 @@
   flex-direction: column;
 }
 
-/* @supports (height: 100dvh) {
+@supports (height: 100lvh) {
   .container {
-    --height: 100dvh;
+    --height: 100lvh;
   }
-} */
+}
 
 @media (orientation: portrait) {
   .container {
@@ -17,11 +17,11 @@
     height: auto !important;
   }
 
-  /* @supports (height: 100dvh) {
+  @supports (height: 100lvh) {
     .container {
-      --padding: 3dvh;
+      --padding: 3lvh;
     }
-  } */
+  }
 }
 
   .container ::selection {
@@ -81,7 +81,7 @@
   .title {
     position: fixed;
     z-index: 2;
-    top: 50vh;
+    top: calc(var(--height) * 0.5);
     left: 50vw;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -92,7 +92,7 @@
   .content {
     position: relative;
     z-index: 2;
-    margin-top: 90vh;
+    margin-top: calc(var(--height) * 0.9);
     font-size: calc(var(--padding) * 0.75);
     white-space: pre-line;
   }
@@ -125,7 +125,7 @@
     }
 
     .content {
-      margin-top: 66vh;
+      margin-top: calc(var(--height) * 0.66);
       font-size: calc(var(--padding) * 0.88);
       line-height: 1.36;
     }
@@ -145,7 +145,7 @@
   position: sticky;
   top: calc(var(--height) - calc(var(--padding) * 3));
   z-index: 2;
-  margin-top: 10vh;
+  margin-top: calc(var(--height) * 0.1);
   padding: var(--padding);
   font-size: 1.25vw;
 }
