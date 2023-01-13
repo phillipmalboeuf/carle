@@ -70,7 +70,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
   }
 
   return (
-    <div className={styles.container} style={div.current ? { height: `calc((var(--height) * 2) + ${div.current.offsetHeight}px)` } : {}}>
+    <div className={styles.container}>
       <nav className={styles.nav}>
         <div>
           <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>

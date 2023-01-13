@@ -14,6 +14,13 @@
     /* color: $brand; */
   }
 
+  @media (min-width: 1888px) {
+    .icon--logo {
+      width: 39vw;
+      height: 20vw;
+    }
+  }
+
   @media (orientation: portrait) {
     .icon--logo {
       width: 88vw;
