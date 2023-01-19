@@ -11,6 +11,7 @@ export const SVG: FunctionComponent<Props> = (props) => {
         logo: '0 0 114 17',
         off: '0 0 52 35',
         on: '0 0 52 35',
+        arrow: '0 0 10 10',
         fr: '0 0 52 36',
         en: '0 0 52 36',
       }[props.k] || '0 0 512 512'} aria-label={props.label}>
@@ -29,6 +30,9 @@ export const SVG: FunctionComponent<Props> = (props) => {
         <path d="M15,2C7.8,2,2,7.8,2,15v5c0,7.2,5.8,13,13,13h22c7.2,0,13-5.8,13-13v-5c0-7.2-5.8-13-13-13H15 M15,0h22
           c8.3,0,15,6.7,15,15v5c0,8.3-6.7,15-15,15H15C6.7,35,0,28.3,0,20v-5C0,6.7,6.7,0,15,0z"/>
         <path d="M32,15.1v4.7c1.1-0.3,2-1.2,2-2.4S33.1,15.4,32,15.1z"/>
+      </>,
+      arrow: <>
+        <path d="M8.336,2.845,1.181,10,0,8.819,7.155,1.664H.849V0H10V9.151H8.336Z" />
       </>,
       en: <>
         <g transform="translate(-18444 22256)">

@@ -10,12 +10,12 @@ const videos = {
   desktop: [
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_A.mp4',
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_B.mp4',
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C.mp4'
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C_2.mp4'
   ],
   mobile: [
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_A.mp4',
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_B.mp4',
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C.mp4'
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C_2.mp4'
   ]
 }
 
@@ -80,7 +80,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
           <button className={styles.button} onClick={muteToggle}>{muted ? <SVG k='off' label='Unmute' /> : <SVG k='on' label='Mute' />}</button>
         </div>
         {/* <a href='/'></a> */}
-        <a href='http://alaincarle.ca' target='_blank' rel='noopener'><u>{content.nav.old[lang]}</u></a>
+        <a href='http://alaincarle.ca' target='_blank' rel='noopener'><u>{content.nav.old[lang]}</u> &nbsp;<SVG k='arrow' label='Externe' /></a>
       </nav>
 
       <main className={styles.main}>

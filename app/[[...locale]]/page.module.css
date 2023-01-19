@@ -101,6 +101,7 @@
   @media (min-width: 1888px) {
     .content {
       font-size: calc(var(--padding) * 0.5);
+      max-width: 39vw;
     }
   }
 
