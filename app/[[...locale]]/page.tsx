@@ -10,7 +10,7 @@ const videos = {
   desktop: [
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_A.mp4',
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_B.mp4',
-    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C_2.mp4'
+    'https://dispatchuploads.b-cdn.net/AtelierCarle_Desktop_1920x1080_C_3.mp4'
   ],
   mobile: [
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_A.mp4',
