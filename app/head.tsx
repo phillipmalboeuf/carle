@@ -9,7 +9,7 @@ export default function Head() {
       <meta property="og:title" content="AtelierCarle"/>
       <meta property="og:description" content="Alain Carle Architecte se dote aujourd’hui d’une nouvelle identité et devient AtelierCarle." />
       <meta property="og:type" content="article" />
-      <meta property="og:image" content="/OG.png"/>
+      <meta property="og:image" content="https://ateliercarle.ca/OG.png"/>
       <meta property="og:url" content="https://ateliercarle.ca"/>
       <meta name="twitter:card" content="summary_large_image" />
     </>
