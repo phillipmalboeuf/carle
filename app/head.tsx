@@ -4,7 +4,7 @@ export default function Head() {
       <title>Atelier Carle</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta name="description" content="AtelierCarle est une agence d’architecture basée à Montréal depuis plus de 25 ans. La firme, anciennement Alain Carle Architecte, réalise des projets de toutes échelles de type résidentiel, commercial et autres avec un souci marqué pour une conception ancrée dans une pratique théorique. Aujourd’hui composée de 6 associés, la firme exporte son savoir-faire à l’international." />
-      <link rel="shortcut icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/favicon.png" type="image/png" />
 
       <meta property="og:title" content="Atelier Carle"/>
       <meta property="og:description" content="AtelierCarle est une agence d’architecture basée à Montréal depuis plus de 25 ans. La firme, anciennement Alain Carle Architecte, réalise des projets de toutes échelles de type résidentiel, commercial et autres avec un souci marqué pour une conception ancrée dans une pratique théorique. Aujourd’hui composée de 6 associés, la firme exporte son savoir-faire à l’international." />
