@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { useEffect, useRef, useState } from 'react'
 import { SVG } from '../../components/svg'
+import { content } from './content';
 import styles from './page.module.css'
 
 const videos = {
@@ -17,34 +18,6 @@ const videos = {
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_B.mp4',
     'https://dispatchuploads.b-cdn.net/AtelierCarle_Mobile_1080x1920_C_2.mp4'
   ]
-}
-
-const content = {
-  titre: {
-    fr: 'AtelierCarle',
-  },
-  nav: {
-    locale: {
-      fr: 'En',
-      en: 'Fr'
-    },
-    old: {
-      fr: 'Visiter l\'ancien site',
-      en: 'Visit the previous site'
-    },
-  },
-  content: {
-      fr: `Dans une perspective de continuité et de consolidation des acquis, Alain Carle s’associe à cinq collaborateurs clés afin de lancer un nouveau projet inclusif et porteur d’avenir. 
-
-Un partenariat de longue date est aujourd’hui officialisé entre le fondateur, Abel Bravo Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne et Gabriel Ostiguy, assurant ainsi la pérennité d’une pratique réflexive développée au fil des années.
-
-Pour souligner cette évolution et afin de refléter l’approche conceptuelle inclusive qui unit tous les partenaires et chaque membre de l’équipe, Alain Carle Architecte se dote aujourd’hui d’une nouvelle identité et devient AtelierCarle.`,
-      en: `With a view to continuity and consolidation of achievements, Alain Carle is joining forces with five key collaborators to launch a new inclusive agency looking to the future. 
-
-A long-standing partnership is now formalized between the founder, Abel Bravo-Muñoz, Leonor Jara, Isaniel Lévesque, Alexandre Lemoyne and Gabriel Ostiguy, thus ensuring the sustainability of a reflective practice developed over the years. 
-
-To underline this evolution and in order to allow the inclusive conceptual approach which unites all the partners and members of the team, Alain Carle Architecte today presents a new identity and becomes AtelierCarle.`
-  }
 }
 
 export default function Home({ params: { locale } }: { params: { locale: string[] } }) {
