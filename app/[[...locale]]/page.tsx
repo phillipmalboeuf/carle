@@ -74,8 +74,8 @@ export default function Home({ params: { locale } }: { params: { locale: string[
             <a href='mailto:info@ateliercarle.ca' target='_blank' rel='noopener'>info@ateliercarle.ca</a>
           </div>
           <div>
-            <a href='https://www.instagram.com/alaincarlearchitecte' target='_blank' rel='noopener'>Instagram</a><br />
-            <a href='https://www.facebook.com/alaincarlearchitecte' target='_blank' rel='noopener'>Facebook</a>
+            <a href='https://www.instagram.com/ateliercarle/?hl=fr' target='_blank' rel='noopener'>Instagram</a><br />
+            <a href='https://www.facebook.com/ateliercarle' target='_blank' rel='noopener'>Facebook</a>
           </div>
           {/* <div>
             <a href='https://www.linkedin.com/company/alain-carle-architecte/' target='_blank' rel='noopener'>LinkedIn</a><br />
