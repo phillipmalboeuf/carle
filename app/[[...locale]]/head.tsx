@@ -15,6 +15,8 @@ export default function Head({ params: { locale } }: { params: { locale: string 
       <meta property="og:image" content="https://ateliercarle.ca/OG.png"/>
       <meta property="og:url" content="https://ateliercarle.ca"/>
       <meta name="twitter:card" content="summary_large_image" />
+
+      <meta name="google-site-verification" content="i8OhwhQ-Vbbc4vyVWs2JUG4mjCHruGwk_gjFZAiC9uo" />
     </>
   )
 }
