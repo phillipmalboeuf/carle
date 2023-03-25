@@ -46,7 +46,7 @@ export default function Home({ params: { locale } }: { params: { locale: string[
     <div className={styles.container}>
       <nav className={styles.nav}>
         <div>
-          <a className={styles.button} href={lang === 'en' ? '/fr' : '/en'}>
+          <a className={styles.button} href={lang === 'en' ? '/' : '/en'}>
             {lang === 'en' ? <SVG k='fr' label='Français' /> : <SVG k='en' label='English' />}
           </a>
           &nbsp;&nbsp;
