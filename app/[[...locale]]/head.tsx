@@ -17,6 +17,7 @@ export default function Head({ params: { locale } }: { params: { locale: string 
       <meta name="twitter:card" content="summary_large_image" />
 
       <meta name="google-site-verification" content="i8OhwhQ-Vbbc4vyVWs2JUG4mjCHruGwk_gjFZAiC9uo" />
+      <meta name="google-site-verification" content="OGyfBjAsQo8LVxh_J-9vGlLQ2TA463vdaPZ5Di8oLZ0" />
     </>
   )
 }
